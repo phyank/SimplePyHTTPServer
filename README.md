@@ -1,8 +1,12 @@
 # SimplePyHTTPServer
 
 This is a simple http server for personal use. It enriched the http.server in the standard library so that we can quickly create dynamic web pages with multiple types of files in the way we work with django. 
+
 Actually, The key to make use of the http.server in Py3 is to customize the BaseHTTPRequestHandler.This project is an example of this.
+
 It has successfully served Web-GUI at localhost in a project: https://github.com/phyank/LuckyParis 
+
+This project is not designed for production.
 
 features:
 
