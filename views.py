@@ -9,7 +9,7 @@ SESSION_STATUS = {0: 'NOT_INIT', 1: 'INIT', 2: 'LOGIN_SUCCESS', 3: 'TEMPORARY_LO
 ELECTOR_STATUS = {0:'NOT_INIT',1:'INIT',2:'SUBMIT_SUCCEES',3:'SUBMIT_FAILED',4:'UNKNOWN_ERROR',5:'CONFLICT'}
 
 
-class MainStatus:
+class MainStatus: #This class is created only for demo. It shows that you can use the way we work in python to work with this http server.
     def __init__(self):
         self.id=1
         self.article_list={}
@@ -146,10 +146,10 @@ def command_selector(command,method,data):
         return
 
 
-#Views:
+### Demo of Views starts here:
 
 
-def clean_records(method,data):
+def clean_records(method,data):#one dynamic page
     try:
         result=mainStatus.reinit(int(data['pass']))
         if result:
@@ -160,7 +160,7 @@ def clean_records(method,data):
         return ViewsResponse("",{},500)
 
 
-def post_article(method,data):
+def post_article(method,data):#one dynamic page
     if method=="GET":
         return ViewsResponse("",{},403)
     elif method=="POST":
@@ -175,7 +175,7 @@ def post_article(method,data):
     else:
         return ViewsResponse("",{},403)
 
-def get_result(method,data):
+def get_result(method,data):#one dynamic page
     if method=="GET":
         print(data)
         article = ""
@@ -193,11 +193,11 @@ def get_result(method,data):
         return ViewsResponse("",{},403)
 
 
-def index(method,data):
+def index(method,data):#one dynamic page
     return ViewsRedirect("/test")
 
 
-def test(method,data):
+def test(method,data):#one dynamic page
 
     if method=="POST":
         for i in data:
