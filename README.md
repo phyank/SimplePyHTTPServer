@@ -5,8 +5,11 @@ Actually, The key to make use of the http.server in Py3 is to customize the Base
 It has successfully served Web-GUI at localhost in a project: https://github.com/phyank/LuckyParis 
 
 features:
+
 1.Pure Python: This is a simple HTTP server based on Python 3.x standard library. 
-2.Lightweight: It can serve dynamic pages, multiple types of files ,and deal with AJAX interaction, with only 300+ lines of codes. 
+
+2.Lightweight: It can serve dynamic pages, multiple types of files ,and deal with AJAX interaction, with only 300+ lines of codes.
+
 3.Django-like: It is quite like django so that we can easily use it: Pages are described as a function, and the implement of HTTP response are object-oriented.
 
 The customization of BaseHTTPRequestHandler is in server.py
